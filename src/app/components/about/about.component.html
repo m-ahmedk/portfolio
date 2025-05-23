@@ -1,11 +1,42 @@
-<section id="about" class="py-20 px-6 bg-white text-gray-800 animate-fade-in">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-4">About Me</h2>
-    <p class="text-lg leading-relaxed">
-      I'm a full-stack software engineer with 8+ years of experience delivering scalable enterprise solutions.
-      I've architected modular ERP systems for schools and retail, built sync services for biometric attendance,
-      and led integrations for vending automation. I specialize in .NET Core, Node.js, Angular, and cloud-ready
-      deployments using Docker and CI/CD.
-    </p>
+<section id="about" class="bg-charcoal text-white py-20 px-4 ">
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+    <!-- https://picsum.photos/600/600   
+      https://i.ibb.co/m5cdQTcD/my1-edit1.png    https://i.ibb.co/xK27JTD4/my2.jpg  https://i.ibb.co/bjNC8Gjs/my1.jpg-->
+
+    <!-- left content -->
+    <div>
+      <img src="https://i.ibb.co/whdCR6kr/my1-edit2.png" alt="About" class="rounded-lg shadow-lg w-full object-cover" />
+    </div>
+
+    <!-- right content -->
+    <div>
+      <div class="border-l-2 border-indigo-500 pl-5 mb-6">
+        <h2 class="text-3xl font-bold mb-3">ABOUT ME<span class="text-indigo-400">.</span></h2>
+      </div>
+      <p class="text-xl leading-relaxed text-gray-300 mb-10">
+        A Software Developer focused on delivering efficient, clean, and scalable solutions using .NET Core, Angular,
+        and cloud-native tools. I bring years of experience building ERP systems, backend APIs, and UI dashboards
+        tailored for real-world performance.
+      </p>
+
+      <div class="relative inline-block" #dropdownContainer>
+        <button (click)="toggleDropdown()" type="button"
+          class="uppercase text-indigo-500 tracking-widest text-sm px-8 py-4 bg-[#1b1b1b] hover:bg-indigo-500 hover:text-white transition-colors cursor-pointer rounded-lg">
+          Download or View CV ▾
+        </button>
+
+        <div *ngIf="isDropdownOpen"
+          class="absolute right-0 w-48 bg-[#1b1b1b] shadow-lg ring-1 ring-black ring-opacity-5 z-10 animate-fade-in rounded">
+          <a href="/assets/muhammad-ahmed-cv.pdf" download class="dropdown-link" (click)="closeDropdown()">
+            Download PDF
+          </a>
+          <a href="/assets/muhammad-ahmed-cv.pdf" target="_blank" rel="noopener" class="dropdown-link"
+            (click)="closeDropdown()">
+            Open in New Tab
+          </a>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>

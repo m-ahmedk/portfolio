@@ -1,29 +1,29 @@
-.skill-tag {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #eef2ff;
-  color: #4338ca;
-  border-radius: 9999px;
-  font-weight: 500;
-  transition: all 0.2s ease-in-out;
-  transform: scale(1);
-  animation: fade-in-up 0.8s ease-in both;
-}
-
-.skill-tag:hover {
-  background-color: #6366f1;
-  color: white;
-  transform: scale(1.05);
-}
-
-@keyframes fade-in-up {
-  from {
+@keyframes fade-in {
+  0% {
     opacity: 0;
     transform: translateY(10px);
   }
 
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+section {
+  animation: fade-in 0.6s ease-out both;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
 }

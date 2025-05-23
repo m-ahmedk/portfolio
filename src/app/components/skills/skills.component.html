@@ -1,20 +1,61 @@
-<section id="skills" class="py-20 px-6 bg-white text-gray-800">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-8">Skills</h2>
+<!-- <section id="skills" class="w-full bg-white dark:bg-slate-900 py-16 px-6">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 dark:text-white mb-10">Skills</h2>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-      <span class="skill-tag">.NET Core</span>
-      <span class="skill-tag">Angular</span>
-      <span class="skill-tag">Node.js</span>
-      <span class="skill-tag">SQL Server</span>
-      <span class="skill-tag">Tailwind CSS</span>
-      <span class="skill-tag">Docker</span>
-      <span class="skill-tag">CI/CD</span>
-      <span class="skill-tag">GitHub Actions</span>
-      <span class="skill-tag">Power BI</span>
-      <span class="skill-tag">MongoDB</span>
-      <span class="skill-tag">Microservices</span>
-      <span class="skill-tag">AWS & Azure</span>
+      <div *ngFor="let skill of skills"
+        class="bg-indigo-50 dark:bg-slate-700 text-indigo-800 dark:text-white rounded-lg py-3 px-4 font-semibold shadow-sm hover:shadow-md transition-all">
+        {{ skill }}
+      </div>
     </div>
+  </div>
+</section> -->
+<section id="skills" class="py-12 px-6 bg-charcoal text-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="border-l-4 border-indigo-500 pl-4 mb-10">
+      <h2 class="text-3xl md:text-4xl font-bold mb-2">SKILLS<span class="text-indigo-400">.</span></h2>
+      <p class="text-gray-400">From backend systems to frontend UI, and everything in between.</p>
+    </div>
+
+
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
+      <!-- first 4 skill cards -->
+      <ng-container *ngFor="let skill of skills.slice(0, 4)">
+        <div class="bg-slate-800 border border-slate-700 rounded-xl p-5">
+          <h3 class="text-lg font-semibold text-indigo-400 mb-2">{{ skill.title }}</h3>
+          <div class="flex flex-wrap gap-2">
+            <span *ngFor="let tag of skill.tags" class="bg-slate-700 text-sm px-3 py-1 rounded-full">
+              {{ tag }}
+            </span>
+          </div>
+        </div>
+      </ng-container>
+
+      <!-- infinite scroll -->
+      <div class="relative overflow-hidden h-16 mt-8">
+        <div class="absolute flex gap-8 animate-marquee">
+          <ng-container *ngFor="let icon of techIcons">
+            <i [ngClass]="icon"
+              class="text-5xl text-gray-400 hover:text-indigo-400 hover:scale-125 transition duration-300"></i>
+          </ng-container>
+
+          <!-- duplicate icons for seamless loop -->
+          <ng-container *ngFor="let icon of techIcons">
+            <i [ngClass]="icon"
+              class="text-5xl text-gray-400 hover:text-indigo-400 hover:scale-125 transition duration-300"></i>
+          </ng-container>
+        </div>
+      </div>
+
+      <div class="bg-slate-800 border border-slate-700 rounded-xl p-5">
+        <h3 class="text-lg font-semibold text-indigo-400 mb-2">{{ skills[4].title }}</h3>
+        <div class="flex flex-wrap gap-2">
+          <span *ngFor="let tag of skills[4].tags" class="bg-slate-700 text-sm px-3 py-1 rounded-full">
+            {{ tag }}
+          </span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>

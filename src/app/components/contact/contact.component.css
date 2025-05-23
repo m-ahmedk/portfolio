@@ -1,15 +1,15 @@
-@keyframes fade-in {
-    0% {
+@keyframes fade-up {
+    from {
         opacity: 0;
         transform: translateY(20px);
     }
 
-    100% {
+    to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-.animate-fade-in {
-    animation: fade-in 1s ease-out forwards;
+section {
+    animation: fade-up 0.7s ease-out both;
 }

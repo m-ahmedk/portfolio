@@ -6,6 +6,8 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { SkillsComponent } from './components/skills/skills.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ScrollTopComponent } from './components/scroll-top/scroll-top.component';
 
 @Component({
   standalone: true,
@@ -17,9 +19,12 @@ import { FooterComponent } from './components/footer/footer.component';
     ExperienceComponent,
     SkillsComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    ScrollTopComponent, 
+    NavbarComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent { }

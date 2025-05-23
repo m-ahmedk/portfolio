@@ -1,15 +1,15 @@
-@keyframes slide-up {
+@keyframes fade-left {
   from {
-    transform: translateY(30px);
     opacity: 0;
+    transform: translateX(-20px);
   }
 
   to {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateX(0);
   }
 }
 
-.animate-slide-up {
-  animation: slide-up 0.9s ease-out forwards;
+section {
+  animation: fade-left 0.6s ease-out both;
 }
