@@ -1,5 +1,10 @@
 <button *ngIf="showButton" (click)="scrollToTop()"
-  class="fixed bottom-6 right-6 bg-indigo-600 hover:bg-indigo-800 text-white px-4 py-2 rounded-full shadow-lg transition-opacity z-50 animate-bounce"
+  class="fixed cursor-pointer bottom-6 right-6 w-10 h-10 bg-indigo-600 hover:bg-indigo-800 text-white rounded-full shadow-lg transition-opacity z-50 flex items-center justify-center animate-bounce"
   title="Scroll to top">
-  ∧
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up h-5 w-5"
+    aria-hidden="true">
+    <path d="m5 12 7-7 7 7"></path>
+    <path d="M12 19V5"></path>
+  </svg>
 </button>
